@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Django Framework &mdash; books 2022 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Implementing the Database in our project" href="development.html" />
+    <link rel="prev" title="Welcome to books’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> books
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Django Framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-1-introduction-to-django">Chapter 1: Introduction to Django</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#domain-driven-design">Domain-Driven Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-we-need-before-starting">What we need before starting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-process">installation Process</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installation-step-1">Installation Step 1.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation-step-2">Installation Step 2.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-creating-the-django-project">Step 3. Creating the django project.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-creating-the-application">Step 4. Creating the application.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#write-your-first-view">Write your first view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx-installation-directions">Sphinx Installation Directions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#continue-our-project-development">Continue our project development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#now-lets-try-to-use-real-data-and-pass-them-to-our-template">Now lets try to use real Data and pass them to our template.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-urls">Dynamic urls</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-postgresql">Installing PostgreSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-virtual-environment">Installing Virtual Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installing-pipenv">Installing Pipenv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installing-lower-level-virtualenv">Installing lower level: virtualenv</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Implementing the Database in our project</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">books</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Django Framework</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="django-framework">
+<h1>Django Framework<a class="headerlink" href="#django-framework" title="Permalink to this headline"></a></h1>
+<p>We follow instuctions from You tube chanel
+(<a class="reference external" href="https://www.youtube.com/watch?v=aY43fUGlB7E&amp;t=772s">https://www.youtube.com/watch?v=aY43fUGlB7E&amp;t=772s</a>)</p>
+<section id="chapter-1-introduction-to-django">
+<h2>Chapter 1: Introduction to Django<a class="headerlink" href="#chapter-1-introduction-to-django" title="Permalink to this headline"></a></h2>
+<p>Django is a framework that follows the model-template-view pattern,
+which is very similar to the model-view-controller pattern that many
+other frameworks have. The model layer represents the database layer,
+used for data storage. Django abstracts you from writing SQL queries.
+Instead of SQL, you use Python objects, and the load/save operations are
+handled for you.
+The template layer is responsible for composing the HTML responses.
+It allows you to divide the HTML in sections, incorporate these sections in
+multiple pages, do on-the-fly transformations and generation of data, and
+many other operations.
+The view layer is the layer that sits in between the database and
+HTML, and normally is the biggest layer in an application. It is where most
+business logic is located. It is responsible for telling the template layer
+what output to generate, to pass the data that needs to be returned to the
+user, to handle form submissions, and to interface with the model layer for
+persisting data.</p>
+<section id="domain-driven-design">
+<h3>Domain-Driven Design<a class="headerlink" href="#domain-driven-design" title="Permalink to this headline"></a></h3>
+<p>Domain-driven design (DDD) is a technique to write software. It focuses
+on the domain, which is the knowledge or the activity that the software
+needs to model and support. During the development, concepts from
+the domain will be incorporated with the help of business experts and
+engineers.</p>
+</section>
+<section id="what-we-need-before-starting">
+<h3>What we need before starting<a class="headerlink" href="#what-we-need-before-starting" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Python3</p></li>
+<li><p>Database (PostgreSQL)</p></li>
+<li><p>Pipenv</p></li>
+</ul>
+</section>
+<section id="installation-process">
+<h3>installation Process<a class="headerlink" href="#installation-process" title="Permalink to this headline"></a></h3>
+<p>There are two similar approaches we can have:</p>
+<ol class="arabic">
+<li><p>We can first:</p>
+<blockquote>
+<div><ul>
+<li><p>create a virtual environment just under our “working_dir” and then proceed the installation of django.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>That means that whenever we open a new terminal we have to move up a level, activate the environment and go down again to work the project.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The other way is:</p>
+<blockquote>
+<div><ul>
+<li><p>Install Django under our “working_dir”</p></li>
+<li><p>Create the newproject</p></li>
+<li><p>Inside the projects directory we create the virtual environment.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This way each easier to activate it since some IDEs like PyCharm and Visual Studio will auto activate it each time we open a new terminal within the projects directory.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<section id="installation-step-1">
+<h4>Installation Step 1.<a class="headerlink" href="#installation-step-1" title="Permalink to this headline"></a></h4>
+<p>In our project we will use the first approach and create the virtual environment just
+under the “working_dir” and we have to remember to activate it as soon as we open our project.
+So firstly we check if we have installed virtualenv and if not we install and activate it.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>virtualenv --version
+<span class="hll"><span class="gp">$ </span>virtualenv venv
+</span><span class="hll"><span class="gp">$ </span>.<span class="se">\v</span>env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</span>
+<span class="gp gp-VirtualEnv">(venv)</span> <span class="go">PS C:\MyDjangoProjects\django_Framework&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="installation-step-2">
+<h4>Installation Step 2.<a class="headerlink" href="#installation-step-2" title="Permalink to this headline"></a></h4>
+<p>Follow the instuctions within Django Documentation (<a class="reference external" href="https://docs.djangoproject.com/en/4.0/topics/install/#installing-official-release">https://docs.djangoproject.com/en/4.0/topics/install/#installing-official-release</a>)
+on how to install an official release with pip.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -m pip install Django
+<span class="gp gp-VirtualEnv">(venv)</span> <span class="go">PS C:\MyDjangoProjects\django_Framework&gt; python -m pip install Django</span>
+
+<span class="gp">$ </span>python -m django --version
+
+<span class="go">4.0.1</span>
+
+<span class="gp gp-VirtualEnv">(list all the django commands)</span>
+<span class="gp">$ </span>django-admin
+
+<span class="go">Type &#39;django-admin help &lt;subcommand&gt;&#39; for help on a specific subcommand.</span>
+
+<span class="go">Available subcommands:</span>
+
+<span class="go">[django]</span>
+<span class="go">    check</span>
+<span class="go">    compilemessages</span>
+<span class="go">    createcachetable</span>
+<span class="go">    dbshell</span>
+<span class="go">    diffsettings</span>
+<span class="go">    dumpdata</span>
+<span class="go">    flush</span>
+<span class="go">    inspectdb</span>
+<span class="go">    loaddata</span>
+<span class="go">    makemessages</span>
+<span class="go">    makemigrations</span>
+<span class="go">    migrate</span>
+<span class="go">    runserver</span>
+<span class="go">    sendtestemail</span>
+<span class="go">    shell</span>
+<span class="go">    showmigrations</span>
+<span class="go">    sqlflush</span>
+<span class="go">    sqlmigrate</span>
+<span class="go">    sqlsequencereset</span>
+<span class="go">    squashmigrations</span>
+<span class="go">    startapp</span>
+<span class="go">    startproject</span>
+<span class="go">    test</span>
+<span class="go">    testserver</span>
+</pre></div>
+</div>
+</section>
+<section id="step-3-creating-the-django-project">
+<h4>Step 3. Creating the django project.<a class="headerlink" href="#step-3-creating-the-django-project" title="Permalink to this headline"></a></h4>
+<p>Again we follow the official site instructions (<a class="reference external" href="https://docs.djangoproject.com/en/4.0/intro/tutorial01/">https://docs.djangoproject.com/en/4.0/intro/tutorial01/</a>)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>django-admin startproject bookstore
+
+<span class="gp gp-VirtualEnv">(Thats what created:)</span>
+<span class="go">bookstore/</span>
+<span class="go">manage.py</span>
+<span class="go">bookstore/</span>
+<span class="go">    __init__.py</span>
+<span class="go">    settings.py</span>
+<span class="go">    urls.py</span>
+<span class="go">    asgi.py</span>
+<span class="go">    wsgi.py</span>
+<span class="gp gp-VirtualEnv">(We can change the top root directory of the project but not the other. For example BookStore_Project)</span>
+</pre></div>
+</div>
+<p>We are now able to run the server and check our newly created site.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> BookStore_Project
+<span class="gp">$ </span>python manage.py runserver
+
+<span class="go">Watching for file changes with StatReloader</span>
+<span class="go">Performing system checks...</span>
+
+<span class="go">System check identified no issues (0 silenced).</span>
+
+<span class="go">You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.</span>
+<span class="go">Run &#39;python manage.py migrate&#39; to apply them.</span>
+<span class="go">January 22, 2022 - 14:29:31</span>
+<span class="go">Django version 4.0.1, using settings &#39;bookstore.settings&#39;</span>
+<span class="go">Starting development server at http://127.0.0.1:8000/</span>
+<span class="go">Quit the server with CTRL-BREAK.</span>
+</pre></div>
+</div>
+<p>And everything is working smoothly!!!</p>
+</section>
+<section id="step-4-creating-the-application">
+<h4>Step 4. Creating the application.<a class="headerlink" href="#step-4-creating-the-application" title="Permalink to this headline"></a></h4>
+<p>Now that your environment – a “project” – is set up, you’re set to start doing work.</p>
+<p>Each application you write in Django consists of a Python package that follows a certain
+convention. Django comes with a utility that automatically generates the basic directory
+structure of an app, so you can focus on writing code rather than creating directories.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Projects vs. apps</em></p>
+<p>What’s the difference between a project and an app? An app is a web application that
+does something – e.g., a blog system, a database of public records or a small poll app.
+A project is a collection of configuration and apps for a particular website. A project
+can contain multiple apps. An app can be in multiple projects.</p>
+</div>
+<p>But before i do this i need to initialize Github.
+So under the Projects directory where manage.py is located i create a new <strong>file named .gitignore</strong>
+and i type:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">venv</span><span class="o">/*</span>
+</pre></div>
+</div>
+<p>After that again at projects directory i type:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git init
+
+
+<span class="go">Initialized empty Git repository in C:/MyDjangoProjects/django_Framework/Bookstore_Project/.git/</span>
+</pre></div>
+</div>
+<p>After that we tell github who we are by running the commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --global user.email otinanai1309@gmail.com
+<span class="gp">$ </span>git config --global user.name otinanai1309
+</pre></div>
+</div>
+<p>After that login to your github account and create a new repository <strong>named django_project.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All the console commands that refers to git we are giving them from a windows command promp
+and after we have activated our virtualenv.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;# django_project&quot;</span> &gt;&gt; README.md
+<span class="gp">$ </span>git init
+<span class="gp">$ </span>git add README.md
+<span class="gp">$ </span>git commit -m <span class="s2">&quot;first commit&quot;</span>
+<span class="gp">$ </span>git branch -M main
+<span class="gp">$ </span>git remote add origin https://github.com/Otinanai1309/django_project.git
+<span class="gp">$ </span>git push -u origin main
+</pre></div>
+</div>
+<p>Finally within our projects directory we create the application.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python manage.py startapp books</span>
+</pre></div>
+</div>
+</section>
+<section id="write-your-first-view">
+<h4>Write your first view<a class="headerlink" href="#write-your-first-view" title="Permalink to this headline"></a></h4>
+<p>Let’s write the first view. Open the file books/views.py and put the following Python code in it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+
+
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&quot;Hello, world. You&#39;re at the books index.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is the simplest view possible in Django. To call the view, we need to map it
+to a URL - and for this we need a URLconf.</p>
+<p>To create a URLconf in the polls directory, create a file called urls.py. Your app
+directory should now look like:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">books/</span>
+<span class="go">    __init__.py</span>
+<span class="go">    admin.py</span>
+<span class="go">    apps.py</span>
+<span class="go">    migrations/</span>
+<span class="go">        __init__.py</span>
+<span class="go">    models.py</span>
+<span class="go">    tests.py</span>
+<span class="go">    urls.py</span>
+<span class="go">    views.py</span>
+</pre></div>
+</div>
+<p>In the <strong>books/urls.py</strong> file include the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>The next step is to point the root URLconf at the books.urls module. In <strong>bookstore/urls.py</strong>,
+add an import for django.urls.include and insert an include() in the urlpatterns list,
+so you have:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">path</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;books/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;books.urls&#39;</span><span class="p">)),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="sphinx-installation-directions">
+<h4>Sphinx Installation Directions<a class="headerlink" href="#sphinx-installation-directions" title="Permalink to this headline"></a></h4>
+<p>Now lets make a stop and install to our project sphinx for the documentation.</p>
+<p>We go at the root directory and make the installation.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install sphinx
+<span class="gp">$ </span>mkdir docs
+<span class="gp">$ </span><span class="nb">cd</span> docs
+<span class="gp">$ </span>sphinx-quickstart
+<span class="gp gp-VirtualEnv">(install sphinx_rtd_theme)</span>
+<span class="gp">$ </span>pip install sphinx_rtd_theme
+<span class="gp gp-VirtualEnv">(install sphinxcontrib-httpdomain)</span>
+<span class="gp">$ </span>pip install sphinxcontrib-httpdomain
+<span class="gp gp-VirtualEnv">(install sphinx-copybutton)</span>
+<span class="gp">$ </span>pip install sphinx-copybutton
+</pre></div>
+</div>
+<p>Then we go to <strong>conf.py</strong> and make all the necessary changes:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(uncomment the lines and add a few)</span>
+<span class="go">import sys</span>
+<span class="go">import os</span>
+<span class="go">sys.path.insert(0, os.path.abspath(&#39;.&#39;))        # source directory</span>
+<span class="go">sys.path.insert(o, os.path.abspath(&#39;../..&#39;))    # move up two levels to DJANGO_FRAMEWORK directory</span>
+
+<span class="go">extensions = [</span>
+<span class="go">    &#39;sphinx.ext.duration&#39;,</span>
+<span class="go">    &#39;sphinx.ext.doctest&#39;,</span>
+<span class="go">    &#39;sphinx.ext.autodoc&#39;,</span>
+<span class="go">    &#39;sphinx.ext.autosummary&#39;,</span>
+<span class="go">    &#39;sphinx.ext.napoleon&#39;,</span>
+<span class="go">    &#39;sphinxcontrib.httpdomain&#39;,</span>
+<span class="go">    &#39;sphinx_copybutton&#39;,</span>
+<span class="go">]</span>
+
+<span class="go">autosummary_generate = True</span>
+
+<span class="go">.....</span>
+<span class="go">html_theme = &#39;sphinx_rtd_theme&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="continue-our-project-development">
+<h4>Continue our project development<a class="headerlink" href="#continue-our-project-development" title="Permalink to this headline"></a></h4>
+<p>Now just to make sure that everything is working properly we can run our server
+and go to <strong>localhost/8000/books</strong> and see the <em>message</em> “Hello, world. You’re at the books index”.</p>
+<p>Now that everything is working lets change the fact that we return in our first view
+a hard coded message. Normally we should return an <strong>html file</strong>. To answer that we once more use
+the documentation (<a class="reference external" href="https://docs.djangoproject.com/en/4.0/intro/tutorial03/">https://docs.djangoproject.com/en/4.0/intro/tutorial03/</a>) where
+views and templates are to be discussed.
+Si there we find that It’s a very common idiom to load a template, fill a context and
+return an HttpResponse object with the result of the rendered template. Django provides
+a shortcut. <strong>So within books directory we create a new named templates and there we create
+a new subdirectory with the same app name “books” and there we create a file named index.html</strong></p>
+<p><strong>books.templates.books.index.html</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Django Course<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Programming Books<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ book.title }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ book.thumbnailUrl }}&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Then we can go to views.py and use render instead of HttpResponse.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="c1"># books.views.py</span>
+</span><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="kn">from</span> <span class="nn">django.template</span> <span class="kn">import</span> <span class="n">context</span>
+
+
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;[summary]</span>
+
+<span class="sd">    :param request: [description]</span>
+<span class="sd">    :type request: [type]</span>
+<span class="sd">    :return: index.html</span>
+<span class="sd">    :rtype: html file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;book&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;The Definitive Guide to Django&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;thumbnailUrl&#39;</span><span class="p">:</span> <span class="s1">&#39;https://images-na.ssl-images-amazon.com/images/I/519m7rt6bcL._SX376_BO1,204,203,200_.jpg&#39;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>     <span class="c1"># is a way to pass data from the view to our templates</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;books/index.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If we rerun server we see that it works perfectly but as the project getting bigger
+we might have some problems with the template namespacing.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Now we might be able to get away with putting our templates directly in books/templates
+(rather than creating another books subdirectory), but it would actually be a bad idea.
+Django will choose the first template it finds whose name matches, and if you had a
+template with the same name in a different application, Django would be unable to
+distinguish between them. We need to be able to point Django at the right one, and the
+best way to ensure this is by namespacing them. That is, by putting those templates
+inside another directory named for the application itself.</p>
+</div>
+</section>
+<section id="now-lets-try-to-use-real-data-and-pass-them-to-our-template">
+<h4>Now lets try to use real Data and pass them to our template.<a class="headerlink" href="#now-lets-try-to-use-real-data-and-pass-them-to-our-template" title="Permalink to this headline"></a></h4>
+<p>Under the books directory we have a <strong>books.json</strong> file that contains 10 books.
+We will try to import this file and pass the data using context to index.html template.
+So we will have to change the code of <em>books.views.py and books.templates.books.index.html</em>.
+In order to iterate (loop) all the books inside the json file we once more have to use documentation.
+Search for templates–&gt;Templates API –&gt; Built-In Tag reference–&gt;for.
+we will try tailwindcss instead of bootstrap in order to beautify the site.
+(<a class="reference external" href="https://tailwindcss.com/docs/installation/play-cdn">https://tailwindcss.com/docs/installation/play-cdn</a>) <strong>add the cdn script to the &lt;head&gt; of the html file.</strong></p>
+<p>So we now have new versions for the files</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="cm">&lt;!-- books.templates.books.index.html --&gt;</span>
+</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.tailwindcss.com&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Django Course<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;py-10&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;text-center text*4xl&#39;</span><span class="p">&gt;</span>Programming Books<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;grid grid-cols-4 gap-4 mt-10&quot;</span><span class="p">&gt;</span>
+        {% for book in books %}
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;justify-self-center&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> {{ book.title }} <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot; {{ book.thumbnailUrl }} &quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        {% endfor %}
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="c1"># books.views.py</span>
+</span><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="kn">from</span> <span class="nn">django.template</span> <span class="kn">import</span> <span class="n">context</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">booksdata</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;C:\MyDjangoProjects\django_Framework\Bookstore_Project</span><span class="se">\\</span><span class="s1">books</span><span class="se">\\</span><span class="s1">books.json&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">booksdata</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;[summary]</span>
+
+<span class="sd">    :param request: [description]</span>
+<span class="sd">    :type request: [type]</span>
+<span class="sd">    :return: index.html</span>
+<span class="sd">    :rtype: html file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;books&#39;</span><span class="p">:</span> <span class="n">data</span><span class="p">}</span>     <span class="c1"># is a way to pass data from the view to our templates</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;books/index.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="dynamic-urls">
+<h4>Dynamic urls<a class="headerlink" href="#dynamic-urls" title="Permalink to this headline"></a></h4>
+<p>(<a class="reference external" href="https://docs.djangoproject.com/en/4.0/intro/tutorial03/">https://docs.djangoproject.com/en/4.0/intro/tutorial03/</a>)
+<strong>Removing hardcoded URLs in Templates.</strong>
+The problem with this hardcoded, tightly-coupled approach is that
+it becomes challenging to change URLs on projects with a lot of templates.
+However, since you defined the name argument in the path() functions in the
+books.urls module, you can remove a reliance on specific URL paths defined in
+your url configurations by using the {% url %} template tag.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;The way this works is by looking up the URL definition as specified in</span>
+<span class="sd">the books.urls module. You can see exactly where the URL name of ‘detail’</span>
+<span class="sd">is defined below:&quot;&quot;&quot;</span>
+<span class="o">...</span>
+<span class="c1"># the &#39;name&#39; value as called by the {% url %} template tag</span>
+<span class="n">path</span><span class="p">(</span><span class="s1">&#39;&lt;int:question_id&gt;/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">detail</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;detail&#39;</span><span class="p">),</span>
+<span class="o">...</span>
+<span class="c1"># this is an example from the documentation</span>
+</pre></div>
+</div>
+<p>So after finishing all changes our files become like this:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="cm">&lt;!-- templates/books/show.html --&gt;</span>
+</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.tailwindcss.com&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Django Course<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;py-10&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;text-center text-4xl&#39;</span><span class="p">&gt;</span>{{book.title}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;w-10/12 mt-10&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex justify-between&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex justify-between&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;w-3/12 ml-20&quot;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{book.thumbnailUrl}}&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="p">/&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;w-9/12&quot;</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-3xl&quot;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-gray-600 mt-5&quot;</span><span class="p">&gt;</span>{{book.shortDescription}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mt-10&quot;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-3xl&quot;</span><span class="p">&gt;</span>Pages<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-gray-600 mt-5&quot;</span><span class="p">&gt;</span>Total {{book.pageCount}} pages<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mt-10&quot;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-3xl&quot;</span><span class="p">&gt;</span>Author<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-gray-600 mt-5&quot;</span><span class="p">&gt;</span>
+                                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-gray-600 mt-5&quot;</span><span class="p">&gt;</span> {{book.authors|join:&quot;, &quot;}} <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mt-10&quot;</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-3xl&quot;</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-gray-600 mt-4&quot;</span><span class="p">&gt;</span>{{book.longDescription}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="cm">&lt;!--templates/books/index.html--&gt;</span>
+</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.tailwindcss.com&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Django Course<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;py-10&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;text-center text*4xl&#39;</span><span class="p">&gt;</span>Programming Books<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;grid grid-cols-4 gap-4 mt-10&quot;</span><span class="p">&gt;</span>
+        {% for book in books %}
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/book/{{ book.id }}  &quot;</span>
+            <span class="na">class</span><span class="o">=</span><span class="s">&quot;justify-self-center text-center my-4&quot;</span>
+            <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span>
+        <span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;justify-self-center&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot; {{ book.thumbnailUrl }} &quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-lg text-gray-700&quot;</span><span class="p">&gt;</span> {{ book.title }} <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        {% endfor %}
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="c1"># bookstore.urls.py</span>
+</span><span class="sd">&quot;&quot;&quot;bookstore URL Configuration</span>
+
+<span class="sd">The `urlpatterns` list routes URLs to views. For more information please see:</span>
+<span class="sd">    https://docs.djangoproject.com/en/4.0/topics/http/urls/</span>
+<span class="sd">Examples:</span>
+<span class="sd">Function views</span>
+<span class="sd">    1. Add an import:  from my_app import views</span>
+<span class="sd">    2. Add a URL to urlpatterns:  path(&#39;&#39;, views.home, name=&#39;home&#39;)</span>
+<span class="sd">Class-based views</span>
+<span class="sd">    1. Add an import:  from other_app.views import Home</span>
+<span class="sd">    2. Add a URL to urlpatterns:  path(&#39;&#39;, Home.as_view(), name=&#39;home&#39;)</span>
+<span class="sd">Including another URLconf</span>
+<span class="sd">    1. Import the include() function: from django.urls import include, path</span>
+<span class="sd">    2. Add a URL to urlpatterns:  path(&#39;blog/&#39;, include(&#39;blog.urls&#39;))</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">path</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;books/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;books.urls&#39;</span><span class="p">)),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;book/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;books.urls&#39;</span><span class="p">)),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="c1"># books.urls.py</span>
+</span><span class="kn">from</span> <span class="nn">unicodedata</span> <span class="kn">import</span> <span class="n">name</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;book.all&#39;</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&lt;int:id&gt;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;book.show&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="c1"># books.views.py</span>
+</span><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="kn">from</span> <span class="nn">django.template</span> <span class="kn">import</span> <span class="n">context</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+
+
+<span class="c1"># workingDirectory = os.path.abspath(__file__)</span>
+<span class="c1"># file = os.path.join(workingDirectory, &quot;books.json&quot;)</span>
+
+
+<span class="n">booksdata</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">MyDjangoProjects</span><span class="se">\\</span><span class="s1">django_Framework</span><span class="se">\\</span><span class="s1">Bookstore_Project</span><span class="se">\\</span><span class="s1">books</span><span class="se">\\</span><span class="s1">books.json&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="c1"># print(&quot;file:&quot;, booksdata)</span>
+<span class="c1"># booksdata = open(file).read()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">booksdata</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;[summary]</span>
+
+<span class="sd">    :param request: [description]</span>
+<span class="sd">    :type request: [type]</span>
+<span class="sd">    :return: index.html</span>
+<span class="sd">    :rtype: html file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;books&#39;</span><span class="p">:</span> <span class="n">data</span><span class="p">}</span>     <span class="c1"># is a way to pass data from the view to our templates</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;books/index.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;[summary]</span>
+
+<span class="sd">    :param request: [description]</span>
+<span class="sd">    :type request: [type]</span>
+<span class="sd">    :param id: the id of the book</span>
+<span class="sd">    :type id: int</span>
+<span class="sd">    :return: [description]</span>
+<span class="sd">    :rtype: [type]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">singlebook</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
+            <span class="n">singlebook</span> <span class="o">=</span> <span class="n">book</span>
+            <span class="c1"># print(&quot;singlebook:&quot;, singlebook)</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;book&#39;</span><span class="p">:</span> <span class="n">singlebook</span><span class="p">}</span>     <span class="c1"># is a way to pass data from the view to our templates</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;books/show.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In order to make our project better we one more time use the documentation of django. We search
+for templates and template–&gt;Templates API Reference–&gt; Build-in tag reference –&gt; (right side) url
+(<a class="reference external" href="https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#url">https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#url</a>)</p>
+<p>This is a way to output links without violating the DRY principle by having to hard-code URLs
+in your templates:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% url &#39;some-url-name&#39; v1 v2 %}
+</pre></div>
+</div>
+<p>The first argument is a URL pattern name. It can be a quoted literal or any other context variable.
+Additional arguments are optional and should be space-separated values that will be used as arguments
+in the URL. The example above shows passing positional arguments. Alternatively you may use keyword
+syntax:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% url &#39;some-url-name&#39; arg1=v1 arg2=v2 %}
+</pre></div>
+</div>
+<p>Do not mix both positional and keyword syntax in a single call. All arguments required by the URLconf should be present.</p>
+<p>For example, suppose you have a view, app_views.client, whose URLconf takes a client ID
+(here, client() is a method inside the views file app_views.py). The URLconf line might
+look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="p">(</span><span class="s1">&#39;client/&lt;int:id&gt;/&#39;</span><span class="p">,</span> <span class="n">app_views</span><span class="o">.</span><span class="n">client</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;app-views-client&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>…then, in a template, you can create a link to this view like this:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll">{% url &#39;app-views-client&#39; client.id %} <span class="cm">&lt;!-- this one we will use in our index file --&gt;</span>
+</span></pre></div>
+</div>
+<p>The template tag will output the string /clients/client/123/.</p>
+<p>Note that if the URL you’re reversing doesn’t exist, you’ll get an NoReverseMatch exception
+raised, which will cause your site to display an error page.
+If you’d like to retrieve a URL without displaying it, you can use a slightly different call:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% url &#39;some-url-name&#39; arg arg2 as the_url %}
+
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ the_url }}&quot;</span><span class="p">&gt;</span>I&#39;m linking to {{ the_url }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>The scope of the variable created by the as var syntax is the {% block %} in which the
+{% url %} tag appears.</p>
+<p>This {% url … as var %} syntax will not cause an error if the view is missing.
+In practice you’ll use this to link to views that are optional:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% url &#39;some-url-name&#39; as the_url %}
+{% if the_url %}
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ the_url }}&quot;</span><span class="p">&gt;</span>Link to optional stuff<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+{% endif %}
+</pre></div>
+</div>
+<p>If you’d like to retrieve a namespaced URL, specify the fully qualified name:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% url &#39;myapp:view-name&#39; %}
+</pre></div>
+</div>
+<p>So we can improve our index.html file:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="cm">&lt;!-- templates/books/index.html --&gt;</span>
+</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.tailwindcss.com&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Django Course<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;py-10&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;text-center text*4xl&#39;</span><span class="p">&gt;</span>Programming Books<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;grid grid-cols-4 gap-4 mt-10&quot;</span><span class="p">&gt;</span>
+        {% for book in books %}
+<span class="hll">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot; {% url &#39;book.show&#39; book.id %} &quot;</span>
+</span>            <span class="na">class</span><span class="o">=</span><span class="s">&quot;justify-self-center text-center my-4&quot;</span>
+            <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span>
+        <span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;justify-self-center&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot; {{ book.thumbnailUrl }} &quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-lg text-gray-700&quot;</span><span class="p">&gt;</span> {{ book.title }} <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        {% endfor %}
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="installing-postgresql">
+<h3>Installing PostgreSQL<a class="headerlink" href="#installing-postgresql" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Download PostgreSQL installer</p></li>
+<li><p>Click on the executable file and run the installer</p></li>
+<li><p>Select your preferred language</p></li>
+<li><p>Specify directory where you want to install PostgreSQL</p></li>
+<li><p>Specify PostgreSQL server port (for examlpe 5432)</p></li>
+<li><p>Specify data directory to initialize PostgreSQL database</p></li>
+</ul>
+</section>
+<section id="installing-virtual-environment">
+<h3>Installing Virtual Environment<a class="headerlink" href="#installing-virtual-environment" title="Permalink to this headline"></a></h3>
+<p>There are two ways to install and use Virtual Environments. (<a class="reference external" href="https://docs.python-guide.org/dev/virtualenvs/">https://docs.python-guide.org/dev/virtualenvs/</a>)</p>
+<ul class="simple">
+<li><p>First way is to install Pipenv. Before we go any further, we need to make sure that we have Python installed on our pc.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python --version
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Additionally, we will need to make sure we have pip available. We can check this by running:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip --version
+</pre></div>
+</div>
+<section id="installing-pipenv">
+<h4>Installing Pipenv<a class="headerlink" href="#installing-pipenv" title="Permalink to this headline"></a></h4>
+<p>Pipenv is a dependency manager for Python projects. If you’re familiar with Node.js’ npm or
+Ruby’s bundler, it is similar in spirit to those tools. While pip can install Python packages,
+Pipenv is recommended as it’s a higher-level tool that simplifies dependency management for
+common use cases.
+Use pip to install Pipenv:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install --user pipenv
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This does a user installation to prevent breaking any system-wide packages. If pipenv
+isn’t available in your shell after installation, you’ll need to add the user base’s
+binary directory to your PATH.
+On Windows you can find the user base binary directory by running
+py -m site –user-site and replacing site-packages with Scripts. For example, this could return
+C:\Users\Username\AppData\Roaming\Python36\site-packages so you would need to set your PATH to
+include C:\Users\Username\AppData\Roaming\Python36\Scripts. You can set your user PATH
+permanently in the Control Panel. You may need to log out for the PATH changes to take effect.</p>
+</div>
+<p>Installing packages for the project</p>
+<p>Pipenv manages dependencies on a per-project basis. To install packages,
+change into your project’s directory (or just an empty directory for this tutorial) and run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> project_folder
+<span class="gp">$ </span>pipenv install requests
+</pre></div>
+</div>
+<p>Pipenv will install the excellent Requests library and create a Pipfile for you in
+your project’s directory. The Pipfile is used to track which dependencies your project
+needs in case you need to re-install them, such as when you share your project with others.
+You should get output similar to this (although the exact paths shown will vary):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Creating a Pipfile for this project...</span>
+<span class="go">Creating a virtualenv for this project...</span>
+<span class="go">Using base prefix &#39;/usr/local/Cellar/python3/3.6.2/Frameworks/Python.framework/Versions/3.6&#39;</span>
+<span class="go">New python executable in ~/.local/share/virtualenvs/tmp-agwWamBd/bin/python3.6</span>
+<span class="go">Also creating executable in ~/.local/share/virtualenvs/tmp-agwWamBd/bin/python</span>
+<span class="go">Installing setuptools, pip, wheel...done.</span>
+
+<span class="go">Virtualenv location: ~/.local/share/virtualenvs/tmp-agwWamBd</span>
+<span class="go">Installing requests...</span>
+<span class="go">Collecting requests</span>
+<span class="go">Using cached requests-2.18.4-py2.py3-none-any.whl</span>
+<span class="go">Collecting idna&lt;2.7,&gt;=2.5 (from requests)</span>
+<span class="go">Using cached idna-2.6-py2.py3-none-any.whl</span>
+<span class="go">Collecting urllib3&lt;1.23,&gt;=1.21.1 (from requests)</span>
+<span class="go">Using cached urllib3-1.22-py2.py3-none-any.whl</span>
+<span class="go">Collecting chardet&lt;3.1.0,&gt;=3.0.2 (from requests)</span>
+<span class="go">Using cached chardet-3.0.4-py2.py3-none-any.whl</span>
+<span class="go">Collecting certifi&gt;=2017.4.17 (from requests)</span>
+<span class="go">Using cached certifi-2017.7.27.1-py2.py3-none-any.whl</span>
+<span class="go">Installing collected packages: idna, urllib3, chardet, certifi, requests</span>
+<span class="go">Successfully installed certifi-2017.7.27.1 chardet-3.0.4 idna-2.6 requests-2.18.4 urllib3-1.22</span>
+
+<span class="go">Adding requests to Pipfile&#39;s [packages]...</span>
+<span class="go">P.S. You have excellent taste!</span>
+</pre></div>
+</div>
+<p>In order to access all your installed packages you need to activate Pipenv with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipenv shell
+</pre></div>
+</div>
+</section>
+<section id="installing-lower-level-virtualenv">
+<h4>Installing lower level: virtualenv<a class="headerlink" href="#installing-lower-level-virtualenv" title="Permalink to this headline"></a></h4>
+<p>virtualenv is a tool to create isolated Python environments. Virtualenv creates a folder which
+contains all the necessary executables to use the packages that a Python project would need.</p>
+<p>It can be used standalone, in place of Pipenv.</p>
+<p>Install virtualenv via pip:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install virtualenv
+</pre></div>
+</div>
+<p>Test your installation:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>virtualenv --version
+</pre></div>
+</div>
+<p>Basic Usage</p>
+<ul class="simple">
+<li><p>Create a virtual environment for a project:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> project_folder
+<span class="hll"><span class="gp">$ </span>virtualenv venv
+</span>
+<span class="go">or</span>
+
+<span class="hll"><span class="gp">$ </span>python -m venv venv_name
+</span><span class="gp gp-VirtualEnv">(First venv is a command and second is the name of the virtual environment)</span>
+</pre></div>
+</div>
+<p>virtualenv venv will create a folder in the current directory which will contain the
+Python executable files, and a copy of the pip library which you can use to install other
+packages. The name of the virtual environment (in this case, it was venv) can be anything;
+omitting the name will place the files in the current directory instead.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“venv” is the general convention used globally. As it is readily available in ignore
+files (eg: .gitignore)</p>
+</div>
+<p>This creates a copy of Python in whichever directory you ran the command in, placing it in
+a folder named venv.</p>
+<p>You can also use the Python interpreter of your choice (like python2.7).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>virtualenv -p /usr/bin/python2.7 venv
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To begin using the virtual environment, it needs to be activated assuming that you are in your project directory:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="gp">$ </span><span class="nb">source</span> venv/Scripts/activate
+</span><span class="go">OR</span>
+<span class="hll"><span class="gp">$ </span><span class="nb">source</span> venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</span><span class="go">OR</span>
+<span class="hll"><span class="gp">$ </span>.<span class="se">\v</span>env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</span><span class="gp gp-VirtualEnv">(Depending the IDE or the bash-terminal we use)</span>
+</pre></div>
+</div>
+<p>Install packages using the pip command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install requests
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If you are done working in the virtual environment for the moment, you can deactivate it:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>deactivate
+</pre></div>
+</div>
+<p>This puts you back to the system’s default Python interpreter with all its installed libraries.</p>
+<p>To delete a virtual environment, just delete its folder. (In this case, it would be rm -rf venv.)</p>
+<p>After a while, though, you might end up with a lot of virtual environments littered across your
+system, and it’s possible you’ll forget their names or where they were placed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Running virtualenv with the option –no-site-packages will not include the packages that
+are installed globally. This can be useful for keeping the package list clean in case it
+needs to be accessed later. [This is the default behavior for virtualenv 1.7 and later.]
+In order to keep your environment consistent, it’s a good idea to “freeze” the current
+state of the environment packages. To do this, run:</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip freeze &gt; requirements.txt
+</pre></div>
+</div>
+<p>This will create a requirements.txt file, which contains a simple list of all the packages
+in the current environment, and their respective versions. You can see the list of installed
+packages without the requirements format using pip list. Later it will be easier for a
+different developer (or you, if you need to re-create the environment) to install the same
+packages using the same versions:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install -r requirements.txt
+</pre></div>
+</div>
+<p>This can help ensure consistency across installations, across deployments, and across developers.</p>
+<p>Lastly, remember to exclude the virtual environment folder from source control by adding it to
+the ignore list. (<a class="reference external" href="https://docs.python-guide.org/writing/gotchas/#version-control-ignores">https://docs.python-guide.org/writing/gotchas/#version-control-ignores</a>)</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to books’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="development.html" class="btn btn-neutral float-right" title="Implementing the Database in our project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Karamichailidis Christos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

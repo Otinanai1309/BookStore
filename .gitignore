@@ -1,0 +1,2 @@
+# go to the venv and ignore everything inside
+venv/*
