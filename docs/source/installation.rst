@@ -223,6 +223,7 @@ After that login to your github account and create a new repository **named djan
     $ echo "# django_project" >> README.md
     $ git init
     $ git add README.md
+    $ git add .
     $ git commit -m "first commit"
     $ git branch -M main
     $ git remote add origin https://github.com/Otinanai1309/django_project.git
