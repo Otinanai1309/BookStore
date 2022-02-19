@@ -28,8 +28,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','ueg#9)g*ys1$p@la-=lpyzq4wdd-m_o
 DEBUG = os.environ.get('DJANGO_DEBUG', '') == 'True'
 # DEBUG = True
 
-ALLOWED_HOSTS = ['dry-woodland-17438.herokuapp.com']
-
+ALLOWED_HOSTS = ['https://my-b00kstore.herokuapp.com']
+# https://git.heroku.com/my-b00kstore.git
 
 # Application definition
 

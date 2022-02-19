@@ -3600,9 +3600,30 @@ Press the Install Heroku CLI button and download the 64 bit version windows inst
     Logging in... done
     Logged in as karamichailidis@gmail.com
 
-    $ heroku create
-    Creating app... done, ⬢ hidden-plains-58943
-    https://hidden-plains-58943.herokuapp.com/ | https://git.heroku.com/hidden-plains-58943.git
+    $ heroku create -a example-app
+    Creating app... done, ⬢ example-app
+    https://thawing-inlet-61413.herokuapp.com/ | https://git.heroku.com/example-app.git
+
+    $ git remote -v 
+    heroku  https://git.heroku.com/example-app.git (fetch)
+    heroku  https://git.heroku.com/example-app.git (push)
+    In my command line was the following lines
+    heroku  https://git.heroku.com/my-b00kstore.git (fetch)
+    heroku  https://git.heroku.com/my-b00kstore.git (push)
+    origin  https://github.com/Otinanai1309/bookstore.git (fetch)
+    origin  https://github.com/Otinanai1309/bookstore.git (push)
+
+    $ heroku git:remote -a example-app
+    set git remote heroku to https://git.heroku.com/example-app.git
+
+    $ git push heroku main
+    Initializing repository, done.
+    updating 'refs/heads/main'
+    ...
+    ...
+    remote: Verifying deploy... done.
+    To https://git.heroku.com/my-b00kstore.git
+    * [new branch]      main -> main
 
 we add this https://hidden-plains-58943.herokuapp.com/ to ALLOWED_HOSTS on settings.py
 
@@ -3622,6 +3643,12 @@ we add this https://hidden-plains-58943.herokuapp.com/ to ALLOWED_HOSTS on setti
     remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
     768537f..38571bd  main -> main
 
+
+.. code-block:: console
+    :emphasize-lines: 1
+
+    $ heroku open
+    
 
 
 
